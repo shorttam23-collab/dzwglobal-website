@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZW Global | Building Generational Wealth Across Africa</title>
+    <meta name="description" content="Strategic business consulting and vetted South African investment opportunities. Connecting international investors to high-yield ventures through trusted partnerships.">
+    
+    <!-- Fonts: Playfair Display for elegance + Inter for readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dzw-blue: #003366;
+            --dzw-gold: #D4AF37;
+            --dzw-cream: #F5F5F0;
+            --dzw-charcoal: #2C2C2C;
+            --dzw-light-blue: #4A7BA7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--dzw-charcoal);
+            line-height: 1.6;
+            background: var(--dzw-cream);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(0, 51, 102, 0.1);
+            animation: slideDown 0.6s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dzw-blue);
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dzw-charcoal);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--dzw-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: auto;
+            padding: 6rem 5% 3rem;
+            background: linear-gradient(135deg, var(--dzw-cream) 0%, #E8E8DC 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 51, 102, 0.03) 100%);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dzw-blue);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--dzw-charcoal);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--dzw-blue);
+            color: white;
+            border: 2px solid var(--dzw-blue);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--dzw-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--dzw-blue);
+            border: 2px solid var(--dzw-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--dzw-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
+        }
+        
+        /* Sections */
+        section {
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dzw-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--dzw-charcoal);
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            opacity: 0.8;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid var(--dzw-blue);
+            font-size: 0.9rem;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 51, 102, 0.12);
+        }
+        
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--dzw-blue);
+            margin-bottom: 0.75rem;
+        }
+        
+        .service-card p {
+            margin-bottom: 0.75rem;
+            color: var(--dzw-charcoal);
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+        
+        .service-card li {
+            padding: 0.3rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            color: var(--dzw-charcoal);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--dzw-gold);
+            font-weight: bold;
+        }
+        
+        /* Book Section */
+        .book-highlight {
+            background: var(--dzw-blue);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .book-highlight h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .book-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--dzw-gold);
+            margin: 1rem 0;
+            line-height: 1.4;
+        }
+        
+        .book-highlight p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.95;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--dzw-blue) 0%, var(--dzw-light-blue) 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem 5%;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .contact-item strong {
+            font-weight: 600;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dzw-charcoal);
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .contact {
+                padding: 3rem 2rem;
+                margin: 2rem 3%;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">DZW GLOBAL</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building Generational Wealth<br>Across Africa</h1>
+            <p class="subtitle">Connecting international investors to vetted South African opportunities while providing strategic business operations for growing firms.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Join Our Community</a>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="max-width: 900px; margin: 2rem auto; padding: 1.5rem 5%; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--dzw-blue); margin-bottom: 1rem;">Dr. Zai Williams</h2>
+        
+        <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 1rem;">Strategic business consultant and program manager specializing in operational excellence and generational wealth-building across Africa.</p>
+        
+        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; font-style: italic; color: #666;">"Grounded in structure, led with humanity."</p>
+        
+        <p style="font-size: 0.9rem; font-weight: 600; color: var(--dzw-blue);">Cape Town, South Africa 🇿🇦</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="padding: 2rem 5%; max-width: 1200px; margin: 0 auto;">
+        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">What We Do</h2>
+        <p class="section-subtitle" style="font-size: 1rem; margin-bottom: 2rem;">Three pillars of support for businesses and investors building wealth across Africa</p>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h3>Program Management & Business Consulting</h3>
+                <p>Strategic operations for professional services firms looking to scale with excellence.</p>
+                <ul>
+                    <li>Operational transformation and system optimization</li>
+                    <li>Team performance and accountability frameworks</li>
+                    <li>Remote and on-site support for African and international businesses</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <h3>Investment Opportunities in South Africa</h3>
+                <p><strong>Connecting US and international investors to vetted South African opportunities through strategic partnerships.</strong></p>
+                <p>As a US expat living and working in South Africa, I've built relationships with attorneys, developers, and investment professionals who provide end-to-end support for international investors entering the South African market.</p>
+                
+                <p><strong>What my network provides:</strong></p>
+                
+                <p><strong>Legal & Company Formation</strong> (through attorney partnerships)</p>
+                <ul>
+                    <li>Company registration and incorporation in South Africa</li>
+                    <li>Business bank account setup and compliance</li>
+                    <li>Property transfer and conveyancing services</li>
+                    <li>Legal due diligence and documentation</li>
+                </ul>
+                
+                <p><strong>Investment Due Diligence</strong> (through real estate partnerships)</p>
+                <ul>
+                    <li>Comprehensive property evaluation frameworks</li>
+                    <li>Market analysis and risk assessment</li>
+                    <li>On-the-ground verification and site visits</li>
+                    <li>Investment structuring guidance</li>
+                </ul>
+                
+                <p><strong>On-Ground Support</strong></p>
+                <ul>
+                    <li>Local market insights and cultural navigation</li>
+                    <li>Connection to trusted service providers</li>
+                    <li>Ongoing operational support for investments</li>
+                    <li>Network access to other investors and operators</li>
+                </ul>
+                
+                <p><strong>Current ventures:</strong></p>
+                <ul>
+                    <li><strong>Co-founder:</strong> <a href="https://brownitup.co.za" target="_blank" style="color: var(--dzw-blue); text-decoration: underline;">Stillness Lodge</a> - Luxury experiential farm development (Brown it up Investment Holdings)</li>
+                    <li><strong>Strategic advisor:</strong> International professional services firms and investment ventures in South Africa</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <h3>Community & Education</h3>
+                <p>Building generational wealth through education, collaboration, and exclusive access.</p>
+                <ul>
+                    <li>Access to systems and connections cultivated in South Africa</li>
+                    <li>Early notification of vetted investment opportunities</li>
+                    <li>Network with like-minded entrepreneurs and investors</li>
+                    <li>Resources, frameworks, and strategic guidance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Book Highlight -->
+        <div class="book-highlight">
+            <h3>📚 How did I position myself to build a consulting firm and gain equity in 4 international ventures?</h3>
+            
+            <p class="book-title">Choosing Myself Is The Strategy:<br>Build The Life You Want With Focus, Boundaries And Decisions</p>
+            
+            <p>This is my origin story - the mindset shifts, boundary-setting, and key decisions that positioned me to recognize and seize opportunities when they appeared. Learn how I got myself ready for the life I'm building now.</p>
+            
+            <a href="#contact" class="btn btn-secondary" style="background: white; color: var(--dzw-blue); border-color: white;">Join the Launch List</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Interested in investing in South Africa with a trusted network?</p>
+            <a href="#contact" class="btn btn-primary">Join Our Community</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Let's Connect</h2>
+        <p>Ready to explore opportunities in South Africa or discuss strategic business support?</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:zai@dzwglobal.co.za">zai@dzwglobal.co.za</a>
+            </div>
+            <div class="contact-item">
+                <strong>Location</strong>
+                <span>Cape Town, South Africa</span>
+            </div>
+        </div>
+        
+        <p><strong>Follow the journey:</strong></p>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@drzaiwilliams" target="_blank">TikTok: @drzaiwilliams</a>
+            <a href="https://www.instagram.com/drziawilliams" target="_blank">Instagram: @drziawilliams</a>
+            <a href="https://www.facebook.com/drzaiwilliams" target="_blank">Facebook: @drzaiwilliams</a>
+            <a href="https://www.youtube.com/@drzaiwilliams" target="_blank">YouTube: @drzaiwilliams</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 DZW Global (Pty) Ltd | Registration No: 2025/885789/07 | Cape Town, South Africa</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">Building generational wealth across Africa</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation to service cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
