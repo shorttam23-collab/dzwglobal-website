@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business OS Diagnostic Audit | DZW Global</title>
+<meta name="description" content="The Business OS Diagnostic Audit. A 14-business-day operational assessment of your business. Direct, written findings with sequenced recommendations.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #2B2B2D;
+    --bg-soft: #343436;
+    --bg-cream: #E8E4DA;
+    --text: #F0ECE4;
+    --text-muted: #C9C4B8;
+    --text-dim: #8A857A;
+    --accent: #C29A57;
+    --accent-soft: #D4B273;
+    --border-dark: rgba(232, 228, 218, 0.1);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; font-size: 16px; }
+
+  .nav { padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-dark); }
+  .brand { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: 0.5px; color: var(--text); text-decoration: none; }
+  .brand em { color: var(--accent); font-style: italic; font-weight: 400; }
+  .nav-back { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; font-weight: 500; }
+  .nav-back:hover { color: var(--accent); }
+
+  section { padding: 90px 40px; }
+  .container { max-width: 920px; margin: 0 auto; }
+  .container-wide { max-width: 1080px; margin: 0 auto; }
+
+  /* HERO */
+  .hero { padding-top: 100px; padding-bottom: 60px; text-align: center; position: relative; overflow: hidden; }
+  .hero-eyebrow { display: inline-block; padding: 8px 18px; border: 1px solid var(--accent); border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 32px; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(42px, 5.5vw, 68px); font-weight: 300; line-height: 1.1; letter-spacing: -0.5px; color: var(--text); margin-bottom: 28px; }
+  .hero h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .hero-lede { font-family: var(--serif); font-size: clamp(19px, 2vw, 22px); font-style: italic; line-height: 1.55; color: var(--text-muted); font-weight: 300; max-width: 660px; margin: 0 auto 28px; }
+  .hero-meta { font-family: var(--sans); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+
+  .dot-accent { position: absolute; top: 80px; right: 80px; width: 100px; height: 100px; opacity: 0.1; pointer-events: none; }
+
+  /* SECTION HEADER */
+  .section-eyebrow { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; text-align: center; }
+  .section-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 46px); font-weight: 300; line-height: 1.15; color: var(--text); margin-bottom: 56px; text-align: center; }
+  .section-title em { font-style: italic; color: var(--accent); font-weight: 400; }
+
+  /* WHO IT'S FOR */
+  .who { background: var(--bg-soft); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+  .signal-list { max-width: 720px; margin: 0 auto; }
+  .signal-item { display: grid; grid-template-columns: 36px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--border-dark); align-items: baseline; }
+  .signal-item:last-child { border-bottom: none; }
+  .signal-num { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 18px; font-weight: 500; }
+  .signal-text { font-family: var(--serif); font-size: 18px; line-height: 1.55; color: var(--text-muted); font-weight: 400; }
+
+  /* WHAT YOU RECEIVE */
+  .deliverables { background: var(--bg); }
+  .deliverable-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 880px; margin: 0 auto; }
+  @media (max-width: 720px) { .deliverable-grid { grid-template-columns: 1fr; } }
+  .deliverable-card { background: var(--bg-soft); border: 1px solid var(--border-dark); border-radius: 4px; padding: 28px 26px; transition: border-color 0.2s; }
+  .deliverable-card:hover { border-color: var(--accent); }
+  .deliverable-num { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .deliverable-title { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--text); line-height: 1.25; margin-bottom: 10px; }
+  .deliverable-desc { font-family: var(--serif); font-style: italic; font-size: 15px; line-height: 1.55; color: var(--text-muted); font-weight: 400; }
+
+  /* INVESTMENT */
+  .investment { background: var(--bg-cream); color: #2B2B2D; text-align: center; }
+  .investment .section-eyebrow { color: #5A5752; }
+  .investment .section-title { color: #2B2B2D; }
+  .investment .section-title em { color: var(--accent); }
+  .investment-card { max-width: 560px; margin: 0 auto; padding: 50px 40px; background: var(--bg); color: var(--text); border-radius: 4px; border: 1px solid var(--accent); }
+  .investment-eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .investment-price { font-family: var(--serif); font-size: 56px; font-weight: 300; color: var(--text); margin-bottom: 6px; line-height: 1; }
+  .investment-price em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .investment-zar { font-family: var(--serif); font-size: 22px; font-style: italic; color: var(--text-muted); font-weight: 400; margin-bottom: 24px; }
+  .investment-desc { font-family: var(--serif); font-size: 17px; line-height: 1.6; color: var(--text-muted); font-style: italic; margin-bottom: 0; }
+
+  /* PROCESS */
+  .process { background: var(--bg); border-top: 1px solid var(--border-dark); }
+  .process-list { max-width: 760px; margin: 0 auto; }
+  .process-step { display: grid; grid-template-columns: 90px 1fr; gap: 26px; padding: 26px 0; border-bottom: 1px solid var(--border-dark); align-items: start; }
+  .process-step:last-child { border-bottom: none; }
+  .process-step-num { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; padding-top: 4px; }
+  .process-step-title { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--text); line-height: 1.25; margin-bottom: 6px; }
+  .process-step-desc { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.5; color: var(--text-muted); font-weight: 400; }
+
+  /* PERSONAL NOTE */
+  .personal { background: var(--bg-soft); border-top: 1px solid var(--border-dark); padding: 70px 40px; }
+  .personal-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+  .personal-quote { font-family: var(--serif); font-size: 22px; font-style: italic; line-height: 1.55; color: var(--text); font-weight: 300; margin-bottom: 16px; }
+  .personal-attribution { font-family: var(--sans); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+
+  /* REQUEST FORM */
+  .request { background: var(--bg); border-top: 1px solid var(--border-dark); padding: 90px 40px; }
+  .request-intro { text-align: center; max-width: 640px; margin: 0 auto 50px; }
+  .request-intro h2 { font-family: var(--serif); font-size: clamp(32px, 4vw, 46px); font-weight: 300; line-height: 1.15; color: var(--text); margin-bottom: 18px; }
+  .request-intro h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .request-intro p { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--text-muted); line-height: 1.55; }
+  .form-wrap { max-width: 720px; margin: 0 auto; background: var(--bg-soft); border: 1px solid var(--accent); border-radius: 4px; padding: 8px; }
+  .form-wrap iframe { width: 100%; border: 0; display: block; }
+
+  /* FOOTER */
+  .foot { padding: 36px 60px; border-top: 1px solid var(--border-dark); text-align: center; font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--text-dim); }
+
+  @media (max-width: 720px) {
+    .nav { padding: 22px 24px; }
+    section { padding: 70px 24px; }
+    .hero { padding-top: 80px; }
+    .dot-accent { display: none; }
+    .foot { padding: 28px 24px; }
+    .investment-price { font-size: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<svg class="dot-accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#E8E4DA">
+    <circle cx="10" cy="10" r="1.2"/><circle cx="25" cy="10" r="1.2"/><circle cx="40" cy="10" r="1.2"/><circle cx="55" cy="10" r="1.2"/><circle cx="70" cy="10" r="1.2"/><circle cx="85" cy="10" r="1.2"/>
+    <circle cx="92" cy="25" r="1.2"/><circle cx="92" cy="40" r="1.2"/><circle cx="92" cy="55" r="1.2"/><circle cx="92" cy="70" r="1.2"/><circle cx="92" cy="85" r="1.2"/>
+    <circle cx="85" cy="92" r="1.2"/><circle cx="70" cy="92" r="1.2"/><circle cx="55" cy="92" r="1.2"/><circle cx="40" cy="92" r="1.2"/><circle cx="25" cy="92" r="1.2"/><circle cx="10" cy="92" r="1.2"/>
+    <circle cx="3" cy="85" r="1.2"/><circle cx="3" cy="70" r="1.2"/><circle cx="3" cy="55" r="1.2"/><circle cx="3" cy="40" r="1.2"/><circle cx="3" cy="25" r="1.2"/>
+  </g>
+</svg>
+
+<nav class="nav">
+  <a href="https://www.dzwglobal.co.za" class="brand">DZW <em>Global</em></a>
+  <a href="https://www.dzwglobal.co.za" class="nav-back">← Back to home</a>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Business OS</div>
+    <h1>The Business OS <em>Diagnostic Audit.</em></h1>
+    <p class="hero-lede">A direct, structured assessment of where your business is running through you, what's missing structurally, and what to install first.</p>
+    <p class="hero-meta">$1,500 / R25,000 · delivered within 14 business days</p>
+  </div>
+</section>
+
+<section class="who">
+  <div class="container">
+    <span class="section-eyebrow">Who it's for</span>
+    <h2 class="section-title">This audit is built for businesses where <em>operations are quietly costing you.</em></h2>
+
+    <div class="signal-list">
+      <div class="signal-item"><div class="signal-num">01</div><div class="signal-text">You have a team between 6 and 150 people, and you can name the bottlenecks but not the fix.</div></div>
+      <div class="signal-item"><div class="signal-num">02</div><div class="signal-text">Things still depend on you that should not. Decisions, follow-up, and quality control are still routing through leadership.</div></div>
+      <div class="signal-item"><div class="signal-num">03</div><div class="signal-text">You're past the survival stage. The business works. You're trying to figure out what to install before the next stage breaks it.</div></div>
+      <div class="signal-item"><div class="signal-num">04</div><div class="signal-text">You serve sophisticated clients (federal, government-adjacent, professional services, cross-border) and the cost of operational drag is real.</div></div>
+      <div class="signal-item"><div class="signal-num">05</div><div class="signal-text">You want a direct read, not a sales pitch. You want to know what's actually happening so you can decide what to do about it.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="deliverables">
+  <div class="container-wide">
+    <span class="section-eyebrow">What you receive</span>
+    <h2 class="section-title">A structured audit, <em>not a generic assessment.</em></h2>
+
+    <div class="deliverable-grid">
+      <div class="deliverable-card">
+        <div class="deliverable-num">01</div>
+        <div class="deliverable-title">Top 3 operational drag points</div>
+        <div class="deliverable-desc">Identified by severity, leadership cost, and dependency value. Not what's loudest. What matters most.</div>
+      </div>
+
+      <div class="deliverable-card">
+        <div class="deliverable-num">02</div>
+        <div class="deliverable-title">Findings by dimension</div>
+        <div class="deliverable-desc">Team, workflow, systems, leadership leverage, and visibility. Each with observed reality, implications, and priority.</div>
+      </div>
+
+      <div class="deliverable-card">
+        <div class="deliverable-num">03</div>
+        <div class="deliverable-title">Recommended first fixes</div>
+        <div class="deliverable-desc">What to systemize first. What to leave alone. What can be improved quickly.</div>
+      </div>
+
+      <div class="deliverable-card">
+        <div class="deliverable-num">04</div>
+        <div class="deliverable-title">Setup recommendation</div>
+        <div class="deliverable-desc">Whether further engagement is warranted, scoped to your actual situation. Sometimes the answer is no.</div>
+      </div>
+
+      <div class="deliverable-card">
+        <div class="deliverable-num">05</div>
+        <div class="deliverable-title">60-minute findings call</div>
+        <div class="deliverable-desc">A working session with Dr. Zai to walk through the report, answer questions, and align on what comes next.</div>
+      </div>
+
+      <div class="deliverable-card">
+        <div class="deliverable-num">06</div>
+        <div class="deliverable-title">Written findings report</div>
+        <div class="deliverable-desc">5 to 8 pages of operational assessment. Yours to keep, share with your team, or use as the foundation for the next phase.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="investment">
+  <div class="container">
+    <span class="section-eyebrow">Investment</span>
+    <h2 class="section-title">One <em>direct</em> price.</h2>
+
+    <div class="investment-card">
+      <div class="investment-eyebrow">Business OS Diagnostic Audit</div>
+      <div class="investment-price">$<em>1,500</em></div>
+      <div class="investment-zar">R25,000 ZAR</div>
+      <p class="investment-desc">Includes 60-minute intake interview, full audit, written findings report, and 60-minute findings call. Delivered within 14 business days from payment and intake completion.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <span class="section-eyebrow">Process</span>
+    <h2 class="section-title">How <em>it works.</em></h2>
+
+    <div class="process-list">
+      <div class="process-step">
+        <div class="process-step-num">Step 01</div>
+        <div>
+          <div class="process-step-title">Submit the request below</div>
+          <div class="process-step-desc">Brief 9-question form. Three minutes. Reviewed personally by Dr. Zai within one business day.</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num">Step 02</div>
+        <div>
+          <div class="process-step-title">Confirmation and payment</div>
+          <div class="process-step-desc">If your situation is a fit, you receive an invoice for the audit. Once paid, you're scheduled.</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num">Step 03</div>
+        <div>
+          <div class="process-step-title">60-minute intake interview</div>
+          <div class="process-step-desc">A structured conversation with Dr. Zai covering team, workflows, tools, reporting, and operational challenges. The 14-business-day clock starts here.</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num">Step 04</div>
+        <div>
+          <div class="process-step-title">Audit and written findings</div>
+          <div class="process-step-desc">Your business is audited against the Business OS framework. Findings are written into a structured report with sequenced recommendations.</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num">Step 05</div>
+        <div>
+          <div class="process-step-title">60-minute findings call</div>
+          <div class="process-step-desc">Walk through the report together. Decide what comes next.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="personal">
+  <div class="personal-inner">
+    <p class="personal-quote">"Every audit request is reviewed personally. Every audit is delivered personally. There is no junior team. There is no template. The work is direct, structured, and built for businesses ready to operate at the next level."</p>
+    <p class="personal-attribution">Dr. Zai Williams</p>
+  </div>
+</section>
+
+<section class="request">
+  <div class="request-intro">
+    <h2>Request <em>your audit.</em></h2>
+    <p>Reviewed personally by Dr. Zai. Response within one business day.</p>
+  </div>
+
+  <div class="form-wrap">
+    <iframe data-tally-src="https://tally.so/embed/VLoQqa?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="Business OS Diagnostic Audit Request"></iframe>
+  </div>
+</section>
+
+<footer class="foot">
+  Business OS by Dr. Zai Williams · Delivered through DZW Global
+</footer>
+
+<script src="https://tally.so/widgets/embed.js"></script>
+<script>
+  // Initialize Tally form embed
+  (function() {
+    var loadTally = function() {
+      if (typeof Tally !== 'undefined') {
+        Tally.loadEmbeds();
+      } else {
+        document.querySelectorAll('iframe[data-tally-src]').forEach(function(iframe) {
+          iframe.src = iframe.dataset.tallySrc;
+        });
+      }
+    };
+    if (document.readyState === 'complete') {
+      loadTally();
+    } else {
+      window.addEventListener('load', loadTally);
+    }
+  })();
+</script>
+
+</body>
+</html>
